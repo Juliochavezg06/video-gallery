@@ -1,0 +1,132 @@
+youtube-player {
+  position: relative;
+  width: 640px;
+  height: 400px;
+  margin: auto;
+  cursor: pointer;
+}
+.youtube-player img {
+  width: 100%;
+}
+.youtube-player.pristine::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -25px;
+  height: 0;
+  width: 0;
+  border-left: 50px solid #FFF;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  transition: opacity .2s ease;
+}
+.youtube-player.pristine:hover::before {
+  opacity: .7;
+}
+.preview_image {
+  margin: 15px;
+}
+.preview_image img {
+  width: 100%;
+  max-width: 200p;
+}
+.slick-custom-prev, .slick-custom-next {
+  z-index: 1;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #FFF !important;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+.slick-custom-prev i {
+  margin-right: 5px;
+}
+.slick-custom-prev {
+  left: 0;
+  z-index: 1;
+}
+.slick-custom-next {
+  right: 0;
+  z-index: 1;
+}
+.slider-slik {
+  background: #000;
+}
+.slick-dots {
+  margin-bottom: 25px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.slick-dots button {
+  cursor: pointer;
+  background: #c6c6c6;
+  border: none;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  color: #c6c6c6;
+  margin: 0 7.5px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.slick-dots .slick-active button {
+  background: #ff8859;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #FFF;
+  width: 14px;
+  height: 14px;
+}
+.slick-dots .slick-custom-next, .slick-dots .slick-custom-prev {
+  display: none !important;
+}
+@media only screen and (max-width: 768px) {
+  .slick-custom-prev, .slick-custom-next {
+    font-size: 30px;
+  }
+  .slick-custom-prev {
+    left: 0;
+  }
+  .slick-custom-next {
+    right: 0;
+  }
+  .triangle {
+    border-width: 0px 30px 30px 30px;
+  }
+  .slick-dots button {
+    width: 14px;
+    height: 14px;
+    padding: 0px 3px;
+    margin: 0 5px;
+  }
+  .slick-dots .slick-active button {
+    width: 14px;
+    height: 14px;
+    padding: 0px 3px;
+    margin: 0 5px;
+  }
+}
