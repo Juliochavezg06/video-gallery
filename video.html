@@ -1,0 +1,17 @@
+<script src="https://kit.fontawesome.com/043784ad03.js" crossorigin="anonymous"></script>
+<div class="slider slider-for">
+  {% for item in module.gallery %}
+  <div
+       class="youtube-player pristine" data-video-url="{{ item.youtube_url }}"
+       data-video-id="">
+    <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}">
+  </div>    
+  {% endfor %}
+</div>
+<div class="slider slider-nav">
+  {% for item in module.gallery %}
+  <div class="preview_image">
+    <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}">
+  </div>    
+  {% endfor %}
+</div>
